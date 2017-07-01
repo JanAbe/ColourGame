@@ -25,6 +25,10 @@ button{
   letter-spacing: 1px;
   font-size: inherit;
   transition: all 0.4s;
+  outline: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 button:hover{
@@ -32,9 +36,6 @@ button:hover{
   background: steelblue;
 }
 
-button:focus {
-  outline:0;
-}
 
 .square{
   width: 30%;
@@ -51,6 +52,10 @@ button:focus {
   color: white;
 }
 
+#modeSelectSpan{
+
+}
+
 #container{
   margin: 5% auto; /*This will center the element with the id container*/
   max-width: 600px;
@@ -63,7 +68,7 @@ button:focus {
 
 #stripe{
   background-color: white;
-  heigth: 30px;
+  height: 30px;
   text-align: center;
 }
 
@@ -71,7 +76,6 @@ button:focus {
   display: inline-block;
   width: 20%;
   text-transform: uppercase;
-  height: 100%;
   font-weight: 700;
   color: steelblue;
   letter-spacing: 1px;
