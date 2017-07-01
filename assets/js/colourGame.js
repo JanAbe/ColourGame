@@ -1,3 +1,6 @@
+// Nog een keer helemaal opschonen, het is volgens mij super spaghetti (✖╭╮✖);
+
+
 var squares = document.querySelectorAll(".square");
 var restartButton = document.querySelector("#restart");
 var easyButton = document.querySelector("#easyButton");
@@ -54,6 +57,8 @@ function main(){
       colourDisplay.textContent = goalColour;
       document.querySelector("h1").style.backgroundColor = "steelblue";
     }
+    document.querySelector("#message").textContent = "";
+    this.textContent = "New colours";
   });
 
   // If the easy mode is selected.
@@ -80,15 +85,12 @@ function main(){
     easyButton.classList.remove("selected");
     for(var i=0; i<squares.length-3; i++){
       assignRandomColour(squares[i]);
+      squares[i].style.display = "block";
     }
     for(var j=6; j<squares.length; j++){
-      if(squares[j].style.display === "none"){
-        squares[j].style.display = "block";
-      }
-      else{
-        squares[j].style.display = "none";
-      }
+      squares[j].style.display = "none";
     }
+
     goalColour = assignGoalColourEasy();
     colourDisplay = document.querySelector("#colourDisplay");
     colourDisplay.textContent = goalColour;
